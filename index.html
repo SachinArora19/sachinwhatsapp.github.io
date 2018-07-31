@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sachin ChatApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="whatsappCss.css">
+  <!-- Font Awesome File -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="whastappJS.js"></script>
+</head>
+
+<body>
+  <div class="container mainDiv">
+    <div class="subMainDiv">
+      <!-- Code for chat list begins here -->
+      <div class="col-md-4 col-sm-6 col-xs-12 chatList">
+        <div class="chatListSubDiv">
+          <div class="row heading">
+            <div class="col-sm-2 col-xs-4 heading-avatar">
+              <div class="heading-avatar-iconUser" onclick="$('.subMainDiv').attr('hidden',true);$('.subProfileDiv').attr('hidden',false);">
+                <img src="images/myImg.png">
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-4">
+              <input type="button"class="newMessage" data-toggle="tooltip" title="Send new Message" style="cursor: pointer; border-radius: 50%;border-style: none" value="Send New Message" />
+            </div>
+            <div class="col-sm-2 col-xs-4  heading-dot  pull-right">
+              <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="favoriteProgramsdropdown-container">
+            <div class="favoriteProgramsdropdown-list" style="display: block;">
+              <input type="search" style="width: 100%;border-radius:25px;border-color: lightgray;" placeholder="Search the name here" class="favoriteProgramsdropdown-search"/>
+              <div id="fvrtProgramsList">
+							  <div class="row chatTab">
+  								<div class="fvrtProgramsLi row chatTabContent firstChat">
+  								  <div class="col-sm-3 col-xs-3 friendAvatar">
+    									<div class="avatar-icon">
+    									  <img src="images/kopalImg.png">
+    									</div>
+  								  </div>
+  								  <div class="col-sm-9 col-xs-9 chatTabDetail">
+    									<div class="row">
+    									  <div class="col-sm-8 col-xs-8 chatTabDetailName">
+    										<span class="friendsName" data-name="Kopal Arora">Kopal Arora
+    									  </span>
+    									  </div>
+    									  <div class="col-sm-4 col-xs-4 pull-right chatTabDetailTime">
+    										<span class="time-meta pull-right">7:30PM
+    									  </span>
+    									  </div>
+    									</div>
+  								  </div>
+  								</div>
+  								<div class="fvrtProgramsLi row chatTabContent">
+  								  <div class="col-sm-3 col-xs-3 friendAvatar">
+    									<div class="avatar-icon">
+    									  <img src="images/mummaImg.png">
+    									</div>
+  								  </div>
+  								  <div class="col-sm-9 col-xs-9 chatTabDetail">
+    									<div class="row">
+      									  <div class="col-sm-8 col-xs-8 chatTabDetailName">
+      										<span class="friendsName" data-name="Mumma">Mumma
+      									  </span>
+      									  </div>
+      									  <div class="col-sm-4 col-xs-4 pull-right chatTabDetailTime">
+      										<span class="time-meta pull-right">4:27PM
+      									  </span>
+      									  </div>
+    									</div>
+  								  </div>
+  								</div>
+  								<div class="fvrtProgramsLi row chatTabContent">
+    								  <div class="col-sm-3 col-xs-3 friendAvatar">
+      									<div class="avatar-icon">
+      									  <img src="images/satyamImg.png">
+      									</div>
+    								  </div>
+    								  <div class="col-sm-9 col-xs-9 chatTabDetail">
+      									<div class="row">
+      									  <div class="col-sm-8 col-xs-8 chatTabDetailName">
+      										<span class="friendsName" data-name="Satyam Kapoor">Satyam Kapoor
+      									  </span>
+      									  </div>
+      									  <div class="col-sm-4 col-xs-4 pull-right chatTabDetailTime">
+      										<span class="time-meta pull-right">04:20AM
+      									  </span>
+    									  </div>
+    									</div>
+  								  </div>
+  								</div>
+  								<div class="fvrtProgramsLi row chatTabContent">
+  								  <div class="col-sm-3 col-xs-3 friendAvatar">
+    									<div class="avatar-icon">
+    									  <img src="images/bachaImg.png">
+    									</div>
+  								  </div>
+  								  <div class="col-sm-9 col-xs-9 chatTabDetail">
+    									<div class="row">
+    									  <div class="col-sm-8 col-xs-8 chatTabDetailName">
+    										<span class="friendsName" data-name="Bacha Airtel">Bacha Airtel
+    									  </span>
+    									  </div>
+    									  <div class="col-sm-4 col-xs-4 pull-right chatTabDetailTime">
+    										<span class="time-meta pull-right">11:53PM
+    									  </span>
+    									  </div>
+    									</div>
+  								  </div>
+  								</div>
+								</div>
+		          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- code for chat List Ends here -->
+      <!-- Code for chat area begins here -->
+      <div class="col-md-8 col-sm-6 col-xs-12 chatArea">
+        <!-- Heading -->
+        <div class="row heading" style="background-color:#009688;color: white">
+          <div class="col-sm-1 col-xs-1 backToChatList" style="font-size: 1.5em;"><i class="fa fa-arrow-left"></i></div>
+          <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon"></div>
+          </div>
+          <div class="col-sm-8 col-xs-7 heading-name"></div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+        </div>
+        <!-- Heading End -->
+
+        <!-- Message Box -->
+        <div class="row message" id="chatWindow">
+
+          <div class="row message-previous">
+            <div class="col-sm-12 previous">
+              <a>Show Previous Messages</a>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                 Hi Sachi!!
+                </div>
+                <span class="message-time pull-right">
+                  Sun
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                <div class="message-text">
+                  Hello.
+                </div>
+                <span class="message-time pull-right">
+                  Sun
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Message Box End -->
+
+        <!-- Reply Box -->
+        <div class="row reply">
+          <div class="col-sm-1 col-xs-1 reply-emojis">
+            <i class="fa fa-smile-o fa-2x"></i>
+          </div>
+          <div class="col-sm-9 col-xs-9 reply-main">
+            <input type="text" class="form-control" id="replyMessage" placeholder="Type your Message Here"/>
+          </div>
+          <div class="col-sm-1 col-xs-1 reply-recording">
+            <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col-sm-1 col-xs-1 reply-send">
+            <i class="fa fa-send fa-2x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <!-- Reply Box End -->
+      </div>
+      <!-- code for chat area Ends here -->
+    
+  </div>
+    <div class="subProfileDiv" hidden>
+      <div class="row heading" style="color: white;padding:0 !important;">
+        <div><h3><span style="padding-left: 2vw;cursor: pointer" onclick="  $('.subMainDiv').attr('hidden',false);
+    $('.subProfileDiv').attr('hidden',true);"><i class="fa fa-arrow-left"></i></span><span style="padding-left: 4vw;">Profile</span></h3>
+        </div>
+      </div>
+      <div class="container-fluid" style="background-color: whitesmoke">
+        
+        <div class=" profilePic" style="border-radius: 50%;height: 30vh;width: 20vw;cursor: pointer;">
+          <img src="images/myImg.png" style="height: 100%;width: 100%;">
+        </div>
+        <div style="font-size: 2em">
+          <label style="width:100vw;background-color: white;color: black;margin-top: 2%; display: flex">
+            <span style="padding-left: 2vw">Sachin Arora<i style="padding-left: 55vw;color: #009688" class="fa fa-edit"></i></span>
+          </label>
+          <label style="font-size: 0.6em;color: black;margin-top: 2%;">This is not your username or pin. This name will be visible to your whatsapp contacts.</label>
+          <label style="width:100vw;background-color: white;color: black;margin-top: 2%;">
+            <label style="padding-left: 2vw;color: #009688">About and Phone Number</label>
+            <hr>
+            <label style="width:100vw;background-color: white;color: black;">
+              <label style="padding-left: 2vw;color: grey">Sachin Arora</label>
+            </label>
+            <label style="width:100vw;background-color: white;color: black;">
+              <label style="padding-left: 2vw;color: grey">+91-9882073988</label>
+            </label>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
