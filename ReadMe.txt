@@ -6,7 +6,3 @@ and for profile picture view user need to click on profile picture icon.
 
 I have used JQuery also to bring some aditional features like chat search (by simply writing the freind name),
 back and fro click event to go back from one view to another and to upload a typed message.
-
-
-Repository Link: https://github.com/SachinArora19/SachinArora19.github.io
-Hosted Portfolio Link: https://sachinarora19.github.io/Portfolio.html
